@@ -1,5 +1,5 @@
 Feature: Search Feature
-  As s user
+  As a user
   I should be able to search product with relevant data
 
   Background: Pre-condition
@@ -7,15 +7,12 @@ Feature: Search Feature
 
     @search
   Scenario Outline: Verify search with product name
-
-
-    When I enter search term "<searchTerm>" in search text box
-    And click on the search button
-    Then I should be redirected to the search result page with relevant result title "<searchResultTitle>"
-    And I should see relevant products for "<searchTerm>"
+      When I click on I Accept cookie button
+      When I enter search term "<searchTerm>" in search text box
+      And click on the search button
+      Then I should be redirected to the search result page with relevant result title "<searchResultTitle>"
+      And I should see relevant products for "<searchTerm>"
 
     Examples:
       | searchTerm | searchResultTitle|
-      |  milk      |  Milk            |
-      |  yogurt    |  Yogurt          |
-      |  juice     |   Juice          |
+      |  dresses      |  Dresses          |

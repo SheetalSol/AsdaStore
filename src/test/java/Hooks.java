@@ -14,8 +14,7 @@ public class Hooks {
     @After
     public void afterEach()
     {
-
-        baseClass.closeBrowser();
+     //baseClass.closeBrowser();
     }
 
 

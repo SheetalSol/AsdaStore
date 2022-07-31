@@ -1,6 +1,7 @@
 Feature: Verify Sign In function
   As a user
   I should be able to sign in with valid data
+  @login
   Scenario:
     Given I am on the homepage "https://www.asda.com/"
     When I Click on I Accept button on cookie PopUp Window

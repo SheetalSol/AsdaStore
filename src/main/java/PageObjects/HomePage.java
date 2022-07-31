@@ -25,9 +25,12 @@ public class HomePage
     @FindBy(id= "onetrust-accept-btn-handler")
     public WebElement cookieButton;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/header/div/div[2]/ul/li[2]/a")
+    public WebElement findStoreLink;
+
     public HomePage(WebDriver driver)
     {
-       // this.driver = driver;
+
         PageFactory.initElements(driver,this);
     }
 
@@ -47,6 +50,10 @@ public class HomePage
     public void clickSearchButton()
     {
         searchButton.click();
+    }
+    public void clickFindStoreLink()
+    {
+        findStoreLink.click();
     }
 
     public boolean checkMyAccountButton() {
